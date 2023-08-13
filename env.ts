@@ -30,6 +30,11 @@ export default Env.rules({
 	PG_PASSWORD: Env.schema.string.optional(),
 	PG_DB_NAME: Env.schema.string(),
 
-	ADMIN_USER: Env.schema.string(),
+	//default admin user
+	ADMIN_EMAIL: Env.schema.string(),
+	ADMIN_LASTNAME: Env.schema.string(),
+	ADMIN_FIRSTNAME: Env.schema.string(),
+	ADMIN_USERNAME: Env.schema.string(),
 	ADMIN_PASSWORD: Env.schema.string(),
+	ADMIN_PHONE_NUMBER: Env.schema.string(),
 })

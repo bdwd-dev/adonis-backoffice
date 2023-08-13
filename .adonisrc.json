@@ -15,6 +15,12 @@
     "Contracts": "contracts"
   },
   "preloads": [
+    {
+      "file": "./start/default_admin_user",
+      "environment": [
+        "web"
+      ]
+    },
     "./start/routes",
     "./start/kernel",
     {
@@ -31,7 +37,8 @@
     "@adonisjs/view",
     "@adonisjs/shield",
     "@eidellev/inertia-adonisjs",
-    "@adonisjs/lucid"
+    "@adonisjs/lucid",
+    "@adonisjs/auth"
   ],
   "metaFiles": [
     {
