@@ -1,5 +1,7 @@
 const { join } = require('path')
 const Encore = require('@symfony/webpack-encore')
+const UnpluginComponents = require('unplugin-vue-components/webpack')
+const {NaiveUiResolver} = require('unplugin-vue-components/resolvers')
 
 /*
 |--------------------------------------------------------------------------
@@ -186,6 +188,11 @@ Encore.enableVueLoader(() => {}, {
   runtimeCompilerBuild: false,
   useJsx: false
 })
+
+//unplugin vue commponents
+Encore.addPlugin(UnpluginComponents({
+  resolvers: [NaiveUiResolver()]
+}))
 
 /*
 |--------------------------------------------------------------------------
